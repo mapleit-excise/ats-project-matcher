@@ -1,0 +1,31 @@
+{
+  "name": "project-matcher-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/project-matcher-api/src",
+  "projectType": "application",
+  "tags": ["type:app scope:api"],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "project-matcher-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "project-matcher-api:build:development"
+        },
+        "production": {
+          "buildTarget": "project-matcher-api:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/project-matcher-api/jest.config.ts"
+      }
+    }
+  }
+}
