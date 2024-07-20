@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/nextjs-project-matcher-app",
   "projectType": "application",
-  "tags": [],
+  "tags": ["type:app", "scope:nextjs"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
