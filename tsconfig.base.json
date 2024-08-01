@@ -15,7 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@project-matcher/model": ["libs/shared/model/src/index.ts"]
+      "@project-matcher/menu-ui": ["libs/menu/ui/src/index.ts"],
+      "@project-matcher/model": ["libs/shared/model/src/index.ts"],
+      "@project-matcher/project-data-access": [
+        "libs/project/data-access/src/index.ts"
+      ],
+      "@project-matcher/project-feature": ["libs/project/feature/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
